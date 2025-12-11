@@ -1,7 +1,5 @@
 import os
 import pprint
-from functools import reduce
-
 
 def load_file(path) -> str:
     with open(path, 'r') as opened_file:
@@ -13,9 +11,6 @@ def get_range_list(raw_string: str):
 
 def is_invalid(id_number: int):
     id_str = str(id_number)
-
-    if id_str[len(id_str) // 2:][0] == '0':
-        return False
 
     allowed_chunks = []
     for chunk_size in range(1, len(id_str) // 2 + 1):
