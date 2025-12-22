@@ -9,7 +9,7 @@ def read_lines(path):
 def parse_lines(lines):
     return [list(line) for line in lines.splitlines()]
 
-def process_lines(lines: [[str]]):
+def process_lines(lines):
     split_counter = 0
     allowed_characters = ['|', 'S']
 
@@ -29,14 +29,14 @@ def process_lines(lines: [[str]]):
 
     return split_counter
 
-def display_lines(lines: [[str]]):
+def display_lines(lines):
     pprint.pprint(["".join(line) for line in lines])
 
 def main():
     file_path = os.path.join(
         os.path.dirname(__file__),
-        # 'input.txt',
-        'input_real.txt',
+        'input.txt',
+        # 'input_real.txt',
     )
 
     lines = read_lines(file_path)
